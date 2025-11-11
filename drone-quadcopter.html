@@ -74,22 +74,26 @@
         }
 
         .media-grid {
+            /* Mise à jour pour une seule colonne */
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 1fr; 
+            justify-content: center; /* Centrage de l'unique élément */
             gap: 20px;
             margin-top: 20px;
         }
-
+        
+        /* Centrage de l'unique image dans la grid */
         .media-item {
             background-color: var(--color-detail-bg);
             padding: 15px;
             border-radius: 8px;
             text-align: center;
+            max-width: 450px; /* Limite la largeur de la carte si la grille a une seule colonne */
+            justify-self: center; /* Centrage horizontal de l'élément dans la grille */
         }
         
-        .media-item img, .media-item iframe {
+        .media-item img {
             width: 100%;
-            max-width: 400px;
             height: auto;
             border-radius: 5px;
             margin-bottom: 10px;
@@ -111,17 +115,6 @@
             padding: 10px 0;
         }
         
-        .video-container {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            margin-top: 30px;
-        }
-
-        .video-wrapper {
-            width: 100%;
-            max-width: 800px;
-        }
     </style>
 </head>
 <body>
@@ -129,7 +122,7 @@
     <div class="header-detail">
         <div class="container">
             <h1>Conception Mécanique d'un Drone Quadcopter</h1>
-            <p style="color: var(--color-secondary);">Projet Académique | Domaines : Conception 3D, Analyse de Structure.</p>
+            <p style="color: var(--color-secondary);">Projet Académique | Domaines : Conception 3D, Analyse de Structure, Optimisation du Poids.</p>
         </div>
     </div>
 
@@ -139,35 +132,20 @@
         <p>
             Ce projet a consisté à concevoir de A à Z le châssis et les bras d'un drone quadcopter en utilisant le logiciel SOLIDWORKS. L'objectif principal était de trouver l'équilibre optimal entre légèreté (pour maximiser l'autonomie et la performance de vol) et rigidité structurelle (pour assurer la stabilité du drone en vol).
         </p>
-      
+        <p>
+            Les étapes clés ont inclus la sélection des matériaux, l'analyse des contraintes structurelles, et la conception modulaire pour faciliter l'assemblage et la maintenance des composants électroniques.
+        </p>
 
-        <h2>Galerie Photos & Vidéos</h2>
+       
+
+        <h2>Galerie Photos </h2>
         <div class="media-grid">
             <div class="media-item">
                 <img src="https://i.imgur.com/JHgtk1A.png" alt="Rendu 3D complet du drone Quadcopter">
                 <p>Rendu 3D de l'assemblage final du Quadcopter</p>
             </div>
-
-            <div class="media-item">
-                <img src="https://via.placeholder.com/400x300?text=Vue+Châssis+Détail" alt="Vue détaillée du châssis du drone">
-                <p>Vue détaillée des points de fixation du châssis</p>
             </div>
-        </div>
         
-        <div class="video-container">
-            <div class="video-wrapper">
-                <h3>Vidéo de Démonstration (Simulation de Mouvement ou Rendu Animé)</h3>
-                <iframe 
-                    width="100%" height="450" 
-                    src="https://www.youtube.com/embed/votre_code_video_ici" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-                <p>Démonstration du prototype physique ou animation d'assemblage.</p>
-            </div>
-        </div>
-
         <a href="index.html" class="btn-back">← Retour au Portfolio</a>
     </div>
 
